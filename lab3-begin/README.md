@@ -145,6 +145,20 @@ Uvešćemo datoteke za gornje i donje zaglavlje, koje će biti identične na cel
 * u `ActivityController` klasi dodati metode koje će obrađivati `GET` zahteve za odlazak na stranicu za izmenu/dodavanje i `POST` zahtev koji dolazi sa te stranice
 
 
+### Maven standalone
+
+* http://docs.spring.io/spring-boot/docs/1.3.3.RELEASE/maven-plugin/
+
+* Zatvoriti Eclipse
+* Otvoriti terminal u folderu gde se nalazi pom.xml projekta
+* Pokrenuti `mvn spring-boot:run` i otići na stranicu projekta iz browser-a
+* Zaustaviti projekat (Ctrl-C)
+* Pokrenuti `mvn package` i pogledati sadržaj target foldera
+* U pom.xml izmeniti `<packaging>war</packaging>` u `<packaging>jar</packaging>` i pokrenuti ponovo `mvn package`
+* Iz target foldera pokrenuti jar
+* Izmeniti testove tako da neki od njih ne prođe
+* Pokušati ponovo sa `mvn package`
+
 ----
 
 ### Domaći zadatak
