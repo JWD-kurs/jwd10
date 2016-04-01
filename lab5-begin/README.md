@@ -7,10 +7,12 @@
 
 
 Classical web - server side generated HTML:
+
 ![Server side generated HTML](http://46.4.82.177/kursimages/web-centric.png)
 
 
 Data centric approach - server side generated data:
+
 ![Data Centric](http://46.4.82.177/kursimages/data-centric.png)
 
 
