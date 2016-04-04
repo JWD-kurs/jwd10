@@ -27,10 +27,6 @@ public class ApiActivityController {
 	public ResponseEntity<List<ActivityDTO>> getActivities() {
 		List<Activity> activities = activityService.findAll();
 
-		if (activities == null || activities.isEmpty()) {
-			return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-		}
-
 		List<ActivityDTO> activitiesDTO = new ArrayList<>();
 		for (Activity activity : activities) {
 			activitiesDTO.add(new ActivityDTO(activity));
