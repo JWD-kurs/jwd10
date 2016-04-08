@@ -46,7 +46,7 @@ AngularJS omogućava slanje request parametra kroz $http servis, tako što se u 
 postave željeni request parametri u poseban objekat **params** (mora se tako zvati po AngularJS dokumentaciji). Primer:
 
 ```javascript
-$http.get('http://www.restservice.com/api/examples', { params: {'param1': 'value1', 'param2': 'value2'}})
+$http.get('http://www.restservice.com/api/examples', { params: {param1: 'value1', param2: 'value2'}})
 		.success(...)
 		.error(...)
 ```
