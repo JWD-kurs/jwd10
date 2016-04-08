@@ -1,0 +1,17 @@
+<h1>WAFEPA - <span ng-hide="activity.id">Add</span><span ng-show="activity.id">Edit</span> activity</h1>
+
+<form class="form-horizontal" ng-init="initActivity()">
+
+    <div class="form-group">
+        <label class="col-sm-2">Name </label>
+        <div class="col-sm-6">
+            <input ng-model="activity.name" class="form-control" />
+        </div>
+    </div>
+
+    <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-10">
+      <button ng-click="saveActivity()" type="submit" class="btn btn-default">Save</button>
+    </div>
+  </div>
+</form>
