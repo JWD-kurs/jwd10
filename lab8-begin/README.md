@@ -13,13 +13,19 @@ Zapravo pretraživanje podataka na osnovu nekog kriterijuma.
 
 Po pravilu, svi dodatni parametri koje je neophodno poslati REST servisu, šalju se preko HTTP request parametara. Npr., za zahtev:
 
-HTTP GET http://www.restservice.com/api/examples**?param1=value1&param2=value2**
+```
+HTTP GET http://www.restservice.com/api/examples?param1=value1&param2=value2
+```
 
-request parametri su param1 i param2 i imaju vrednosti value1 i value2. Naravno, ne moraju se zvati (čak se i ne savetuje) param1 i param2,
+request parametri su param1 i param2 i imaju vrednosti value1 i value2. Naravno, parametra može biti više i ne moraju se zvati (čak se i ne savetuje) param1 i param2,
 već nešto smisleno. Vodeći se ovim, pretraživanje aktivnosti po imenu (na WAFEPA aplikaciji) će biti implementirano slanjem request parametra **name**, 
 npr. za pronalaženje aktivnosti čije ime sadrži reč "run":
 
-HTTP GET http://localhost:8080/api/activities**?name=run**  (obratite pažnju da je osnovni poziv na REST isti, samo smo dodali request parametre na kraju)
+```
+HTTP GET http://localhost:8080/api/activities?name=run
+```
+
+(obratite pažnju da je osnovni poziv na REST isti, samo smo dodali request parametre na kraju)
 
 **Pogrešne implementacije pretraživanja aktivnosti po imenu (preko REST servisa)**:
 
@@ -39,6 +45,13 @@ Spring omogućava proširenje REST servisa ovakvim request parametrima. Sve što
 AngularJS omogućava slanje request parametra kroz $http servis, tako što se u drugom argumentu poziva funkcije $http servisa 
 postave željeni request parametri u poseban objekat **params** (mora se tako zvati po AngularJS dokumentaciji). Primer:
 
+```javascript
+$http.get('http://www.restservice.com/api/examples', { params: {'param1': 'value1', 'param2': 'value2'}})
+		.success(...)
+		.error(...)
+```
+
+U našem slučaju:
 
 ```javascript
 $http.get('api/activities', { params: {'name': 'run'}})
