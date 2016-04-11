@@ -31,5 +31,6 @@ Hibernate omogućava modelovanje kompleksnijih relacija između entiteta kroz an
 * Na stranici za prikaz aktivnosti, u koloni Logs, klikom na broj logova za aktivnost
 otići na zasebnu stranicu (ruta #/activities/:id/logs) i prikazati sve logove za izabranu aktivnost
 (ova stranica treba da izgleda isto kao stranica za prikaz svih logova).
+* Implementirati izmenu loga. Prilikom izmene loga onemogućena je izmena aktivnosti vezane za taj log.
 
 ----
