@@ -1,0 +1,29 @@
+<h1>Logs</h1>
+
+<table class="table table-bordered" ng-init="page = 0; getLogs();">
+	<thead>
+		<tr>
+			<th>ID</th>
+			<th>Date</th>
+			<th>Duration</th>
+			<th>Activity</th>
+			<th>Action</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr ng-repeat="log in logs">
+			<td>{{ log.id }}</td>
+			<td>{{ log.date | date:'dd/MM/yyyy' }}</td>
+			<td>{{ log.duration }}</td>
+			<td>{{ log.activity.name }}</td>
+			<td>
+			</td>
+		</tr>
+	</tbody>
+</table>
+
+<div class="col-md-12 text-center">
+	<span ng-hide="success" class="glyphicon glyphicon-refresh glyphicon-refresh-animate"></span>
+</div>
+
+<a href="#/logs/add" class="btn btn-default">Add new log</a>
